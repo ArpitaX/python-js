@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <link href="css/loading.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+<body class="vh-100">
+
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand nav-top" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="logo.png" width="40" height="40" class="d-inline-block align-top me-2">
+                <span class="fw-bold fs-3">Coder's Playground</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <div class="d-xl-inline-flex">
+                    <!--<label class="input-group-text" for="inputGroupSelect01">Select Language:</label>-->
+                    <button class="btn btn-outline-secondary me-2 mb-2 mb-lg-0 normal-btn" type="button" id="togglebtn" onclick="toggleMode()" style="width: 174px">Dark Mode</button>
+                    <select class="form-select" id="languageSelector" style="width: 175px" onclick="languageSelectorUtil()">
+                        <option value="java">Java</option>
+                        <option value="py">Python</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- BODY -->
+    <div class="container-fluid">
+        <div class="row">
+            <!--<div class="col-xl-1"></div>-->
+            <div class="col-md-6">
+                <div class="form-floating px-2 mt-5">
+                    <div id="form">
+                        <div class="mb-4">
+                            <div class="mb-4">
+                                <label for="exampleFormControlTextarea1" class="form-label ">Write your code here:</label>
+                                <textarea class="form-control" id="code" rows="22" oninput="saveData()"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-5">
+                <div class="form-floating px-2 mt-5">
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label">Output:</label>
+                        <textarea class="form-control" id="output" rows="14" readonly></textarea>
+                        <div class="mb-2 mt-4 form-check form-switch">
+                            <input type="checkbox" class="form-check-input" id="checkbox" onclick="enableUserInput()">
+                            <label class="form-check-label" for="exampleCheck1">Use Custom Input</label>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control" id="userInput" oninput="saveData()" rows="5" disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-xl-1"></div>-->
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <nav class="navbar fixed-bottom navbar-light">
+        <div class="container-fluid d-xl-inline-flex">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <form class="d-flex">
+                    <button class="btn ms-2 run-btn text-light" id="runbtn" onclick="runCode()" style="background-color: #c5454a;">Run My Code!</button>
+                    <button class="btn btn-outline-secondary me-2 ms-2 normal-btn" id="reset-btn" onclick="resetCode()">Reset Code</button>
+                    <button class="btn btn-outline-secondary normal-btn me-2" id="download-btn" onclick="download()">Download Code</button>
+                </form>
+            </ul>
+            <div class="d-inline-flex">
+                
+
+            </div>
+        </div>
+    </nav>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+</body></html>
