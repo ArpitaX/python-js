@@ -38,7 +38,7 @@ public class PythonRunner implements CommandInterpreterUtil {
 
 		String command = change_dir + " && " + run_file;
 
-		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", command);
+		ProcessBuilder builder = new ProcessBuilder("bash", "-c", command);
 		builder.directory(new File(System.getProperty("user.home")));
 		builder.redirectErrorStream(true);
 
