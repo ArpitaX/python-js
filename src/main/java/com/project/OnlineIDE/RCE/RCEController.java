@@ -30,7 +30,7 @@ public class RCEController {
 		System.out.println("File Created: " + success);
 		if (success) {
 			output = runner.runCode(input.getLanguage(), input.getInputs(), input.getHasuserinput(), output);
-			FileHandlerService.deleteFile(input.getLanguage());
+			// FileHandlerService.deleteFile(input.getLanguage());
 
 			if (output == null) {
 				output = new OutputContainer("", "Bad or Illegal Inputs");

@@ -42,7 +42,7 @@ public class JavaRunner implements CommandInterpreterUtil {
 
 		String command = change_dir + " && " + compile_file + " && " + run_file;
 
-		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", command);
+		ProcessBuilder builder = new ProcessBuilder("bash", "-c", command);
 		builder.directory(new File(System.getProperty("user.home")));
 		builder.redirectErrorStream(true);
 
