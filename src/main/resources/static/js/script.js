@@ -66,7 +66,7 @@ function runCode() {
     $.ajax({
         type: "POST",
         contentType: "application/x-www-form-urlencoded",
-        url: "http://localhost:8080/run",
+        url: "https://coders-playground.herokuapp.com/run",
         data: jsondata,
         dataType: 'json',
         cache: false,
